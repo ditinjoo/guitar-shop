@@ -36,3 +36,1216 @@
     transform: rotate(360deg);
   }
 }
+
+/* Guitar Frame Styling */
+.guitar-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.guitar-frame-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.guitar-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.guitar-placeholder-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  z-index: 2;
+  color: #666;
+}
+
+/* Landing Page Guitar & Amp Scene - Coded Design */
+.guitar-amp-scene {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Guitar Design */
+.guitar-showcase {
+  position: relative;
+  width: 200px;
+  height: 350px;
+}
+
+.guitar-body {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  background: linear-gradient(145deg, #8B4513 0%, #CD853F 50%, #DEB887 100%);
+  border-radius: 60px 60px 20px 20px;
+  margin: 0 auto;
+  box-shadow: 
+    inset -10px -10px 20px rgba(0,0,0,0.3),
+    inset 10px 10px 20px rgba(255,255,255,0.1),
+    0 10px 30px rgba(0,0,0,0.2);
+}
+
+.guitar-neck {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 120px;
+  background: linear-gradient(to bottom, #654321 0%, #8B4513 100%);
+  border-radius: 4px;
+  box-shadow: inset -3px 0 10px rgba(0,0,0,0.3);
+}
+
+.guitar-head {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(145deg, #654321 0%, #8B4513 100%);
+  border-radius: 6px 6px 2px 2px;
+}
+
+.tuning-pegs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 2px;
+}
+
+.peg {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #C0C0C0 0%, #808080 100%);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.guitar-strings {
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 350px;
+}
+
+.string {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, #FFD700 0%, #DAA520 100%);
+  opacity: 0.8;
+}
+
+.string:nth-child(1) { left: 2px; }
+.string:nth-child(2) { left: 7px; }
+.string:nth-child(3) { left: 12px; }
+.string:nth-child(4) { left: 17px; }
+.string:nth-child(5) { left: 22px; }
+.string:nth-child(6) { left: 27px; }
+
+.sound-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #000 0%, #2C1810 100%);
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.8),
+    0 0 10px rgba(0,0,0,0.3);
+}
+
+.bridge {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(145deg, #654321 0%, #8B4513 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Amplifier Design */
+.amplifier {
+  position: relative;
+  width: 140px;
+  height: 160px;
+}
+
+.amp-top {
+  width: 140px;
+  height: 10px;
+  background: linear-gradient(145deg, #2C2C2C 0%, #1C1C1C 100%);
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 2px;
+}
+
+.amp-front {
+  width: 140px;
+  height: 150px;
+  background: linear-gradient(145deg, #2C2C2C 0%, #1C1C1C 50%, #000 100%);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.5),
+    inset -5px -5px 15px rgba(0,0,0,0.5),
+    inset 5px 5px 15px rgba(255,255,255,0.05);
+  position: relative;
+}
+
+.amp-speaker {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #1C1C1C 0%, #000 100%);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  box-shadow: 
+    inset 0 0 20px rgba(0,0,0,0.8),
+    0 0 10px rgba(0,0,0,0.3);
+}
+
+.speaker-cone {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #333 0%, #111 100%);
+  border-radius: 50%;
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.7);
+}
+
+.speaker-dust-cap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #444 0%, #222 100%);
+  border-radius: 50%;
+}
+
+.amp-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.control-knob {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, #C0C0C0 0%, #808080 100%);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    0 2px 5px rgba(0,0,0,0.3),
+    inset 0 0 5px rgba(255,255,255,0.2);
+}
+
+.control-knob::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 8px;
+  background: #333;
+  border-radius: 1px;
+}
+
+.amp-logo {
+  text-align: center;
+  color: #FF6428;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 100, 40, 0.5);
+}
+
+.amp-shadow {
+  position: absolute;
+  bottom: -5px;
+  left: 5px;
+  right: 5px;
+  height: 10px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+/* Interactive Brand Hotspots */
+.brand-hotspots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.brand-hotspot {
+  position: absolute;
+  pointer-events: all;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: rgba(255, 100, 40, 0.9);
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 100, 40, 0.3);
+}
+
+.brand-hotspot:hover {
+  background: rgba(255, 100, 40, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 25px rgba(255, 100, 40, 0.5);
+}
+
+.brand-label {
+  display: block;
+  white-space: nowrap;
+}
+
+.hotspot-pulse {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 100, 40, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Hotspot Positions */
+.hotspot-1 { top: 20%; left: 25%; }
+.hotspot-2 { top: 30%; left: 75%; }
+.hotspot-3 { top: 50%; left: 15%; }
+.hotspot-4 { top: 65%; left: 85%; }
+.hotspot-5 { top: 80%; left: 35%; }
+.hotspot-6 { top: 85%; left: 70%; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guitar-image-container {
+    height: 150px;
+  }
+  
+  .guitar-amp-scene {
+    max-width: 100%;
+    height: 300px;
+    gap: 30px;
+  }
+  
+  .guitar-showcase {
+    width: 150px;
+    height: 250px;
+  }
+  
+  .guitar-body {
+    width: 90px;
+    height: 150px;
+  }
+  
+  .amplifier {
+    width: 100px;
+    height: 120px;
+  }
+  
+  .amp-front {
+    width: 100px;
+    height: 110px;
+    padding: 10px;
+  }
+  
+  .brand-hotspot {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guitar-image-container {
+    height: 120px;
+  }
+  
+  .guitar-amp-scene {
+    height: 250px;
+    gap: 20px;
+  }
+  
+  .guitar-showcase {
+    width: 120px;
+    height: 200px;
+  }
+  
+  .amplifier {
+    width: 80px;
+    height: 100px;
+  }
+  
+  .brand-hotspot {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+/* Guitar Frame Styles */
+.guitar-card-frame {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  margin: 0 auto;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 12px;
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    inset 0 2px 8px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.guitar-card-frame:hover {
+  transform: translateY(-8px) rotateX(5deg);
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    inset 0 2px 8px rgba(255, 255, 255, 0.15);
+}
+
+.frame-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: linear-gradient(180deg, #444, #333);
+  border-bottom: 2px solid #555;
+}
+
+.frame-top::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 8px;
+  background: linear-gradient(90deg, #666, #888, #666);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.frame-content {
+  position: absolute;
+  top: 25px;
+  bottom: 50px;
+  left: 15px;
+  right: 15px;
+  background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guitar-display-area {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guitar-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.guitar-card-frame:hover .guitar-image {
+  transform: scale(1.05);
+}
+
+.guitar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f0f0, #ddd);
+  border-radius: 6px;
+  border: 2px dashed #999;
+}
+
+.placeholder-guitar {
+  font-size: 48px;
+  opacity: 0.6;
+  filter: grayscale(0.5);
+}
+
+.frame-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  pointer-events: none;
+  border-radius: 8px;
+}
+
+.frame-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(180deg, #333, #222);
+  border-top: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-bottom::before {
+  content: '';
+  width: 60px;
+  height: 6px;
+  background: linear-gradient(90deg, #444, #666, #444);
+  border-radius: 3px;
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.5),
+    0 1px 1px rgba(255, 255, 255, 0.1);
+}
+
+.frame-stand {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 25px;
+}
+
+.stand-base {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(145deg, #333, #222);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stand-support {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 15px;
+  background: linear-gradient(145deg, #444, #333);
+  border-radius: 2px;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Guitar Card Info */
+.guitar-info-new {
+  margin-top: 25px;
+  text-align: center;
+  padding: 15px;
+}
+
+.guitar-name-new {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.guitar-price-new {
+  font-size: 16px;
+  font-weight: 600;
+  color: #e67e22;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid Layout Updates */
+.guitar-selection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.guitar-card-new {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.guitar-card-new:hover {
+  transform: scale(1.02);
+}
+
+/* Guitar Specifications Styles */
+.specs-section {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  padding: 40px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.coded-guitar-display {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.guitar-technical-view {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.guitar-outline {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.guitar-body-outline {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 220px;
+  background: linear-gradient(145deg, #8b4513, #a0522d);
+  border-radius: 50% 50% 20% 20%;
+  border: 3px solid #654321;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.guitar-sound-hole {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: #000;
+  border-radius: 50%;
+  border: 2px solid #444;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.guitar-bridge {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 12px;
+  background: linear-gradient(90deg, #333, #666, #333);
+  border-radius: 2px;
+}
+
+.guitar-pickguard {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 40px;
+  height: 100px;
+  background: linear-gradient(145deg, #f0f0f0, #ddd);
+  border-radius: 20px 5px 5px 20px;
+  opacity: 0.8;
+}
+
+.guitar-neck-outline {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 180px;
+  background: linear-gradient(180deg, #d2691e, #cd853f);
+  border: 2px solid #8b4513;
+  border-radius: 8px 8px 0 0;
+}
+
+.guitar-frets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.fret-wire {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #c0c0c0;
+  border-radius: 1px;
+}
+
+.fret-wire:nth-child(1) { top: 8%; }
+.fret-wire:nth-child(2) { top: 16%; }
+.fret-wire:nth-child(3) { top: 24%; }
+.fret-wire:nth-child(4) { top: 32%; }
+.fret-wire:nth-child(5) { top: 40%; }
+.fret-wire:nth-child(6) { top: 48%; }
+.fret-wire:nth-child(7) { top: 56%; }
+.fret-wire:nth-child(8) { top: 64%; }
+.fret-wire:nth-child(9) { top: 72%; }
+.fret-wire:nth-child(10) { top: 80%; }
+.fret-wire:nth-child(11) { top: 88%; }
+.fret-wire:nth-child(12) { top: 96%; }
+
+.guitar-strings {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.guitar-string {
+  width: 1px;
+  background: linear-gradient(180deg, #ffd700, #daa520);
+  opacity: 0.8;
+}
+
+.guitar-headstock {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 50px;
+  background: linear-gradient(145deg, #8b4513, #a0522d);
+  border: 2px solid #654321;
+  border-radius: 8px 8px 20px 20px;
+}
+
+.tuning-pegs {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.tuning-peg {
+  width: 6px;
+  height: 6px;
+  background: #444;
+  border-radius: 50%;
+  margin: 2px;
+}
+
+.tech-annotations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.annotation {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #e67e22;
+  min-width: 120px;
+}
+
+.annotation-line {
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background: #e67e22;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.annotation.scale-length .annotation-line { left: -32px; }
+.annotation.body-wood .annotation-line { right: -32px; }
+.annotation.neck-wood .annotation-line { left: -32px; }
+.annotation.pickups .annotation-line { left: -32px; }
+
+.annotation-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.annotation-value {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e67e22;
+  margin-top: 4px;
+}
+
+.specs-data-panel {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.specs-data-panel h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid #e67e22;
+  padding-bottom: 10px;
+}
+
+.specs-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.spec-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px;
+  border-left: 4px solid #e67e22;
+  transition: transform 0.3s ease;
+}
+
+.spec-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spec-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e67e22;
+  border-radius: 50%;
+  filter: grayscale(0.2);
+}
+
+.spec-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.spec-details strong {
+  font-size: 16px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spec-details span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e67e22;
+}
+
+/* Musicians Section Styles */
+.musicians-section {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.musicians-hero {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.coded-musicians-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.musicians-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f3460, #16537e);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stage-lights {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.spotlight {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(20px);
+  opacity: 0.6;
+}
+
+.spotlight-1 {
+  top: 10px;
+  left: 20%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ff6b6b, transparent);
+}
+
+.spotlight-2 {
+  top: 10px;
+  right: 20%;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #4ecdc4, transparent);
+}
+
+.spotlight-3 {
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, #ffe066, transparent);
+}
+
+.stage-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.stage-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px 0;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title-underline {
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #ffe066);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.musicians-content {
+  padding: 40px;
+}
+
+.musicians-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.musician-card {
+  background: linear-gradient(145deg, #fff, #f8f9fa);
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.musician-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.musician-avatar-frame {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.avatar-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(145deg, #e67e22, #d35400);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.avatar-icon {
+  position: relative;
+  z-index: 2;
+}
+
+.person-silhouette {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.head {
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+  margin-bottom: 5px;
+}
+
+.shoulders {
+  width: 35px;
+  height: 20px;
+  background: #fff;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 8px;
+}
+
+.guitar-in-hands {
+  font-size: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.avatar-glow {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #ffe066, #ff6b6b);
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0.3;
+  animation: rotate-glow 3s linear infinite;
+}
+
+@keyframes rotate-glow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.musician-info {
+  text-align: center;
+}
+
+.musician-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.musician-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #4ecdc4;
+  border-radius: 50%;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.coded-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(145deg, #e67e22, #d35400);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(230, 126, 34, 0.3);
+}
+
+.nav-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.page-indicators {
+  display: flex;
+  gap: 10px;
+}
+
+.page-dot {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 2px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-dot:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.page-dot.active {
+  background: #e67e22;
+  border-color: #fff;
+  transform: scale(1.2);
+}
