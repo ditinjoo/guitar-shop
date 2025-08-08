@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# 🎸 Online Guitar Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React application for browsing guitar brands, models, and specifications. Built with Apollo Client and GraphQL for efficient data fetching.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Guitar Brands Page**: Browse all available guitar brands with images
+- **Guitar Models Page**: View models for each brand with search and filter functionality
+- **Guitar Details Page**: Detailed specifications and musicians using each guitar
+- **Responsive Design**: Works on desktop and mobile devices
+- **Language Support**: Multi-language support (English/Macedonian/Albanian)
+- **Apollo GraphQL**: Efficient data fetching with caching
+- **Loading & Error States**: Graceful handling of loading and error states
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React 19** - Modern React with hooks
+- **Apollo Client** - GraphQL client with caching
+- **React Router** - Client-side routing
+- **CSS3** - Custom styling with flexbox and grid
+- **GraphQL** - Query language for APIs
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Prerequisites
 
-### `npm test`
+Before you begin, ensure you have the following installed:
+- Node.js (version 14 or higher)
+- npm or yarn package manager
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🔧 Installation & Setup
 
-### `npm run build`
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd guitar-shop
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Open your browser**
+   Navigate to `http://localhost:3000` to view the application
 
-### `npm run eject`
+## 📖 Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Navigation
+- **Home Page (/)**: Browse all guitar brands
+- **Models Page (/brands/:brandId/models)**: View models for a specific brand
+- **Details Page (/brands/:brandId/models/:modelId)**: View detailed specifications
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Features
+- **Search**: Use the search bar to find specific guitar models
+- **Filter**: Filter models by guitar type (Electric, Acoustic, Bass, Classical)
+- **Pagination**: Navigate through multiple pages of results
+- **Language Switch**: Change language using footer buttons
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🏗️ Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── GuitarList.js          # Brands listing page
+│   ├── GuitarModels.js        # Models listing with search/filter
+│   ├── GuitarModelDetails.js  # Detailed guitar information
+│   └── GuitarShop.css         # Component styles
+├── App.js                     # Main app component with routing
+├── index.js                   # App entry point with Apollo setup
+├── LanguageContext.js         # Language context provider
+├── translations.js            # Translation strings
+└── footer.js                  # Footer component
+```
 
-## Learn More
+## 🔌 API Integration
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The app connects to a GraphQL API at:
+```
+https://graphql-api-brown.vercel.app/api/graphql
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Available Queries:
+- `findAllBrands` - Get all guitar brands
+- `searchModels` - Search models by brand and name
+- `findUniqueModel` - Get detailed model information
 
-### Code Splitting
+## 🎨 Styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The application uses custom CSS with:
+- **CSS Grid & Flexbox** for responsive layouts
+- **Hover effects** for better user interaction
+- **Loading states** with styled indicators
+- **Mobile-first** responsive design
 
-### Analyzing the Bundle Size
+## 🧪 Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `npm start` - Start development server
+- `npm build` - Build for production
+- `npm test` - Run test suite
+- `npm eject` - Eject from Create React App
 
-### Making a Progressive Web App
+## 📱 Responsive Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The application is fully responsive and works on:
+- Desktop computers (1200px+)
+- Tablets (768px - 1199px)
+- Mobile phones (320px - 767px)
 
-### Advanced Configuration
+## 🌐 Language Support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Supports multiple languages with easy switching:
+- English (default)
+- Macedonian
+- Albanian
 
-### Deployment
+## 🚀 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To deploy the application:
 
-### `npm run build` fails to minify
+1. **Build the project**
+   ```bash
+   npm run build
+   ```j
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
