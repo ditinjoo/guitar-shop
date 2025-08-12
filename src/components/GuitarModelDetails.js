@@ -15,7 +15,7 @@ import { ROUTES, CONFIG } from '../constants';
 import './GuitarShop.css';
 
 // Assets
-import LogoSVG from '../assets/logo.svg';
+import { ReactComponent as LogoSVG } from '../assets/logo.svg';
 import { ReactComponent as Person1SVG } from '../assets/person1.svg';
 import { ReactComponent as Person2SVG } from '../assets/person2.svg';
 import { ReactComponent as Page3TextBannerSVG } from '../assets/page3-text-banner.svg';
@@ -24,12 +24,12 @@ import { ReactComponent as GuitarPage3SVG } from '../assets/guitar-page-3.svg';
 
 const GuitarModelDetails = () => {
   const { brandId, modelId } = useParams();
-  
+
   const [activeTab, setActiveTab] = useState('specs');
   const [currentPage, setCurrentPage] = useState(0);
-  
+
   const personSVGs = [Person1SVG, Person2SVG];
-  
+
   const { loading, error, data } = useQuery(GET_MODEL_DETAILS, {
     variables: { brandId, modelId },
   });
@@ -55,7 +55,7 @@ const GuitarModelDetails = () => {
   return (
     <>
       {/* Header with Back Navigation */}
-      <Header 
+      <Header
         showBackButton={true}
         backTo={ROUTES.BRAND_MODELS.replace(':brandId', brandId)}
         backText="Back To List"
@@ -74,7 +74,7 @@ const GuitarModelDetails = () => {
           </div>
         </div>
       </section>
-      
+
       <div className="detail-container">
         {/* Tab Navigation */}
         <div className="tabs">
@@ -123,19 +123,19 @@ const GuitarModelDetails = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Technical annotations */}
                   <div className="tech-annotations">
-                    <div className="annotation scale-length" style={{top: '20%', left: '10%'}}>
+                    <div className="annotation scale-length" style={{ top: '20%', left: '10%' }}>
                       <div className="annotation-line"></div>
                       <h1>{model.name}</h1>
                       <p>{model.description}</p>
                       <div className="annotation-value">{model.specs?.scaleLength}</div>
-                    </div>   
+                    </div>
                   </div>
                 </div>
               </div>
-              
+
               <div className="specs-data-panel">
                 <h3>Technical Specifications</h3>
                 <div className="specs-grid">
@@ -181,7 +181,7 @@ const GuitarModelDetails = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="musicians-content">
                 <div className="musicians-gallery">
                   {visibleMusicians.map((musician, index) => {
