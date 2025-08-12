@@ -20,7 +20,7 @@
 1. **Clone the repository**
    ```bash
    git clone <https://github.com/ditinjoo/guitar-shop.git>
-   Navigate to branch - 'guitarshop-patch1'
+   Navigate to branch - 'main' where all the Pull Requests were merged
    ```
 
 2. **Install dependencies**
